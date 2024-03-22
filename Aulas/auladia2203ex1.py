@@ -1,3 +1,4 @@
-number = range(5,10)
-print(type(number))
-print(number[0])
+nt = int(input("type tabuada "))
+it = range(1,11)
+for t in it:
+    print(f"{t} X {nt} = {nt*t}")
