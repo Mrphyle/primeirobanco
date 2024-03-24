@@ -6,5 +6,5 @@ def ConvertTemp():
 while True:
     ConvertTemp()
     restartcont = input("Do another calculation? ")
-    if restartcont.lower() != 'Yes' and restartcont.lower() != 'yes':
+    if restartcont.lower() == 'Yes':
         break
