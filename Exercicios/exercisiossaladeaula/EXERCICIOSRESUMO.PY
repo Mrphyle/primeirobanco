@@ -21,4 +21,3 @@ while True:
     restartcont = input("Do you want to open another application? (Yes/No): ")
     if restartcont.lower() != 'yes':
         break
-    

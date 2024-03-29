@@ -4,22 +4,26 @@ def whatappopen():
         import os
         caminho_aplicativo = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
         os.startfile(caminho_aplicativo)
-    elif WhatAppOpen.lower() == 'spotify':
+        print("Abrindo Google chorome....")
         import os
         caminho_aplicativo = r"C:\Users\hoolf\AppData\Roaming\Spotify\Spotify.exe"
         os.startfile(caminho_aplicativo)
+        print("Abrindo spotify....")
     elif WhatAppOpen.lower() == 'deepl':
         import os
         caminho_aplicativo = r"C:\Users\hoolf\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\DeepL"
         os.startfile(caminho_aplicativo)
+        print("Abrindo Deepl....")
     elif WhatAppOpen.lower() == 'speedtest':
         import os
         openapp = r"C:\Program Files\Speedtest\Speedtest.exe"
         os.startfile(openapp)
+        print("Abrindo speedtest")
     else:
         import webbrowser
         InputUrl = input("Digite a URL: ")
         webbrowser.open(InputUrl)
+        print(f"Abrindo o site:{InputUrl}")
         '''urls prontas:
         https://github.com/Mrphyle/sincpython
         https://chat.openai.com/
