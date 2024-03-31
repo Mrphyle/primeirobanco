@@ -5,6 +5,7 @@ def whatappopen():
         caminho_aplicativo = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
         os.startfile(caminho_aplicativo)
         print("Abrindo Google chorome....")
+    elif WhatAppOpen.lower() == 'spotify':
         import os
         caminho_aplicativo = r"C:\Users\hoolf\AppData\Roaming\Spotify\Spotify.exe"
         os.startfile(caminho_aplicativo)
@@ -33,5 +34,6 @@ def whatappopen():
 while True:
     whatappopen()
     restartcont = input("Deseja abrir outro aplicativo? (Yes/No): ")
+    print("___________________")
     if restartcont.lower() != 'yes':
         break
