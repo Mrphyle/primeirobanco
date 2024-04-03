@@ -22,9 +22,8 @@ def whatappopen():
         print("Abrindo speedtest")
     else:
         import webbrowser
-        InputUrl = input("Digite a URL: ")
-        webbrowser.open(InputUrl)
-        print(f"Abrindo o site:{InputUrl}")
+        webbrowser.open(WhatAppOpen)
+        print(f"Abrindo o site:{WhatAppOpen}")
         '''urls prontas:
         https://github.com/Mrphyle/sincpython
         https://chat.openai.com/
