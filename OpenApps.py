@@ -1,5 +1,5 @@
 def whatappopen():
-    WhatAppOpen = input("Google\nSpotify\nDeepl\nAbrir um site\nSpeedtest\nQual destes acima deseja iniciar? ")
+    WhatAppOpen = input("Google\nSpotify\nDeepl\nAbrir um site\nSpeedtest\nEDGE/TEAMS\nQual destes acima deseja iniciar? ")
     if WhatAppOpen.lower() == 'google':
         import os
         caminho_aplicativo = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
@@ -20,6 +20,17 @@ def whatappopen():
         openapp = r"C:\Program Files\Speedtest\Speedtest.exe"
         os.startfile(openapp)
         print("Abrindo speedtest")
+    elif WhatAppOpen.lower() == 'edge' or 'teams':
+        import webbrowser
+
+        def openteams():
+            teams_url = "https://teams.microsoft.com/_?culture=pt-br&country=br#/school/teams-grid/General?ctx=teamsGrid"
+            edge = r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
+            webbrowser.get(edge).open(teams_url)
+            print('Teams está abrindo com sucesso!')
+
+        if __name__ == "__main__":
+            openteams()
     else:
         import webbrowser
         webbrowser.open(WhatAppOpen)
