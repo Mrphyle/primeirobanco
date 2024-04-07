@@ -1,10 +1,8 @@
 a = float(input('coloque o ax**2 que é = '))
 b = float(input('coloque o bX que é = '))
 c = float(input('Coloque o c = '))
-
 result1 = b ** 2
 Delta = result1 - 4 * a * c
-
 if (Delta < 0):
     print('Sem raízes reais')
 if (Delta == 0):

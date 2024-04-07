@@ -1,12 +1,18 @@
 import os
 import webbrowser
 import pyperclip
+import time
 def whatappopen():
+    pyperclip.copy("https://chat.openai.com/")
     WhatAppOpen = input("Google\nSpotify\nDeepl\nAbrir um site\nSpeedtest\nEDGE/TEAMS\nQual destes acima deseja iniciar? ")
     if WhatAppOpen.lower() == 'google':
         caminho_aplicativo = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
         os.startfile(caminho_aplicativo)
         print("Abrindo Google chorome....")
+    elif WhatAppOpen.lower() in ['discord','dc']:
+        FileLocation = r"C:\Users\hoolf\Desktop\aplicativos\Apps em geral\Discord"
+        os.startfile(FileLocation)
+        print("Abrindo discord....")
     elif WhatAppOpen.lower() == 'spotify':
         caminho_aplicativo = r"C:\Users\hoolf\AppData\Roaming\Spotify\Spotify.exe"
         os.startfile(caminho_aplicativo)
@@ -29,14 +35,9 @@ def whatappopen():
         if __name__ == "__main__":
             openteams()
     else:
+        
         webbrowser.open(WhatAppOpen)
         print(f"Abrindo o site:{WhatAppOpen}")
-        '''urls prontas:
-        https://github.com/Mrphyle/sincpython
-        https://chat.openai.com/
-        https://teams.microsoft.com/_?culture=pt-br&country=br#/school/teams-grid/General?ctx=teamsGrid
-        https://encurtador.com.br/bpqQ5
-        '''
 while True:
     whatappopen()
     restartcont = input("Deseja abrir outro aplicativo? (Yes/No): ")
