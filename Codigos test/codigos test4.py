@@ -1,4 +1,4 @@
-Login = input("Faça assim:(Exemplo:Diego dia 10/04/24)\n\nQual o nome e dia de emição do pedido? ")
+Login = input("Faça assim:(Exemplo:Diego Dia: 10/04/24)\n\nQual o nome e dia de emição do pedido? ")
 Quantia = float(input("Qual a quantidade de placas que desejá? "))
 Largurasign = float(input("Qual a largura da placa? "))
 Alturasign = float(input("Qual a altura da placa? "))
@@ -16,4 +16,4 @@ def ValorTotal():
 Prazo = (Quantia/6)
 total = ValorTotal() * Quantia
 print(f"_______________________________\nCadastro: {Login}\nQuantidade: {Quantia}\ntamanho: {Alturasign} x {Largurasign}\nFrase: {Script}\nCor da placa: {Corsign}\nCor da letra: {CorScript}")
-print(f"_______________________________\nArea:{Largurasign*Alturasign}\nMaterial:{(Largurasign*Alturasign) * 147.30}\nfrase:{len(removespace)* 0.37}\nValor total:{total}\n_______________________________")
+print(f"_______________________________\nArea:{Largurasign*Alturasign}M^2\nMaterial:R${(Largurasign*Alturasign) * 147.30}\nfrase:R${round(len(removespace)* 0.37,2)}\nValor total:R${total}\n_______________________________")
