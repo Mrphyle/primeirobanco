@@ -16,4 +16,4 @@ def ValorTotal():
 Prazo = (Quantia/6)
 total = ValorTotal() * Quantia
 print(f"_______________________________\nCadastro: {Login}\nQuantidade: {Quantia}\ntamanho: {Alturasign} x {Largurasign}\nFrase: {Script}\nCor da placa: {Corsign}\nCor da letra: {CorScript}")
-print(f"_______________________________\nArea:{Largurasign*Alturasign}M^2\nMaterial:R${(Largurasign*Alturasign) * 147.30}\nfrase:R${round(len(removespace)* 0.37,2)}\nValor total:R${total}\n_______________________________")
+print(f"_______________________________\nArea:{Largurasign*Alturasign}M^2\nMaterial:R${(Largurasign*Alturasign) * 147.30}\nfrase:R${round(len(removespace)* 0.37)}\nValor total:R${total}\n_______________________________")
