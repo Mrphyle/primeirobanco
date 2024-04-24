@@ -1,7 +1,6 @@
 import os
 import webbrowser
 import pyperclip
-import time
 def whatappopen():
     pyperclip.copy("https://chat.openai.com/")
     WhatAppOpen = input("_________________________________\nGoogle\nSpotify\nDeepl\nAbrir um site\nSpeedtest\nEDGE/TEAMS\nQual destes acima deseja iniciar? ")

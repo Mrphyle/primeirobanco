@@ -12,6 +12,9 @@ def mais_menos_vezes_Divisao():
     elif opcao.lower() == 'multiplicar':
         num1, num2 = float(input("Digite o primeiro número: ")), float(input("Digite o segundo número: "))
         print(f"{num1} * {num2} = {num1 * num2}")
+    else:
+        num1, num2 = int(input("Digite o primeiro número: ")), int(input("Digite o segundo número: "))
+        print(f"{num1} **{num2} = {num1**num2}")
 while True:
     mais_menos_vezes_Divisao()
     reset = input("Quer fazer outra operação? (Sim/Não): ")

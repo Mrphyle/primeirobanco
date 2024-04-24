@@ -1,4 +1,6 @@
+import pyperclip
 def ResetCode():
+    pyperclip.copy("complemento")
     ops = input("\n____________\nQuantidade de Subconjunto(OBS:se escrever somente subconjunto também vai)\nAuB\nAnB\ncomplemento\nDigite qual conjunto desejá: ")
     if ops.lower() == 'Quantidade de Subconjunto' or ops.lower() == 'subconjunto':
         opsc1 = int(input("Desejá quantos elementos? "))
