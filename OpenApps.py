@@ -3,7 +3,7 @@ import webbrowser
 import pyperclip
 def whatappopen():
     pyperclip.copy("https://chat.openai.com/")
-    WhatAppOpen = input("_________________________________\nGoogle\nSpotify\nDeepl\nAbrir um site\nSpeedtest\nEDGE/TEAMS\nQual destes acima deseja iniciar? ")
+    WhatAppOpen = input("_________________________________\nGoogle\nSpotify\nzotube music\nDeepl\nAbrir um site\nSpeedtest\nEDGE/TEAMS\nQual destes acima deseja iniciar? ")
     if WhatAppOpen.lower() == 'google':
         caminho_aplicativo = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
         os.startfile(caminho_aplicativo)
@@ -16,6 +16,9 @@ def whatappopen():
         caminho_aplicativo = r"C:\Users\hoolf\AppData\Roaming\Spotify\Spotify.exe"
         os.startfile(caminho_aplicativo)
         print("\nAbrindo spotify....")
+    elif WhatAppOpen.lower() == 'zotube music':
+        webbrowser.open("https://music.youtube.com/")
+        print("\nAbrindo spotify2....")
     elif WhatAppOpen.lower() == 'deepl':
         caminho_aplicativo = r"C:\Users\hoolf\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\DeepL"
         os.startfile(caminho_aplicativo)
