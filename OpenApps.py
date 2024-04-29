@@ -3,11 +3,32 @@ import webbrowser
 import pyperclip
 def whatappopen():
     pyperclip.copy("https://chat.openai.com/")
-    WhatAppOpen = input("_________________________________\nGoogle\nSpotify\nzotube music\nDeepl\nAbrir um site\nSpeedtest\nEDGE/TEAMS\nQual destes acima deseja iniciar? ")
-    if WhatAppOpen.lower() == 'google':
-        caminho_aplicativo = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+    os.system('cls' if os.name == 'nt' else 'clear')
+    WhatAppOpen = input("_________________________________\nNavegadores(Exibe lista de navegadors)\nNavegador P(Padrão)\nSpotify\nDeepl\nAbrir um site\nSpeedtest\nQual destes acima deseja iniciar? ")
+    os.system('cls' if os.name == 'nt' else 'clear')
+    if WhatAppOpen.lower() == 'navegadores':
+        BrownserOps = input("            Google\n            OperaGX\n            Edge\nQual dos navegadores disponiveis acima deseja? ")
+        if BrownserOps.lower() == 'google' :
+            caminho_aplicativo = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+            os.startfile(caminho_aplicativo)
+            print("\nAbrindo Google chorome....")
+        elif BrownserOps.lower() in ['OperaGx','OperaGx']:
+            caminho_aplicativo = r"C:\Users\hoolf\AppData\Local\Programs\Opera GX\launcher.exe"
+            os.startfile(caminho_aplicativo)
+            print("\nAbrindo Opera Gx....")
+        else:
+            def openteams():
+                pyperclip.copy("goncalves1807")
+                teams_url = "https://teams.microsoft.com/_?culture=pt-br&country=br#/school/teams-grid/General?ctx=teamsGrid"
+                edge = r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
+                webbrowser.get(edge).open(teams_url)
+            print('\nAbrindo Microsoft Edge.....')
+        if __name__ == "__main__":
+            openteams()    
+    elif WhatAppOpen.lower() == 'Navegador P(Padrão)':
+        caminho_aplicativo = r"C:\Users\hoolf\AppData\Local\Programs\Opera GX\launcher.exe"
         os.startfile(caminho_aplicativo)
-        print("\nAbrindo Google chorome....")
+        print("\nAbrindo Opera Gx....")
     elif WhatAppOpen.lower() in ['discord','dc']:
         FileLocation = r"C:\Users\hoolf\Desktop\aplicativos\Apps em geral\Discord"
         os.startfile(FileLocation)
@@ -16,9 +37,6 @@ def whatappopen():
         caminho_aplicativo = r"C:\Users\hoolf\AppData\Roaming\Spotify\Spotify.exe"
         os.startfile(caminho_aplicativo)
         print("\nAbrindo spotify....")
-    elif WhatAppOpen.lower() == 'zotube music':
-        webbrowser.open("https://music.youtube.com/")
-        print("\nAbrindo spotify2....")
     elif WhatAppOpen.lower() == 'deepl':
         caminho_aplicativo = r"C:\Users\hoolf\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\DeepL"
         os.startfile(caminho_aplicativo)
@@ -27,19 +45,10 @@ def whatappopen():
         OpenApp = r"C:\Program Files\Speedtest\Speedtest.exe"
         os.startfile(OpenApp)
         print("\nAbrindo speedtest")
-    elif WhatAppOpen.lower() in ['edge','teams']:
-        def openteams():
-            pyperclip.copy("goncalves1807")
-            teams_url = "https://teams.microsoft.com/_?culture=pt-br&country=br#/school/teams-grid/General?ctx=teamsGrid"
-            edge = r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
-            webbrowser.get(edge).open(teams_url)
-            print('\nTeams está abrindo com sucesso!')
-        if __name__ == "__main__":
-            openteams()
-    else:
-        
-        webbrowser.open(WhatAppOpen)
-        print(f"\nAbrindo o site:{WhatAppOpen}")
+    elif WhatAppOpen.lower() == 'site':
+        web = input("Digite a url")
+        webbrowser.open(web)
+        print(f"\nAbrindo o site:{web}")
 while True:
     whatappopen()
     restartcont = input("\nDeseja abrir outro aplicativo? (Yes/No): ")
