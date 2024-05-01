@@ -6,52 +6,45 @@ def whatappopen():
     os.system('cls' if os.name == 'nt' else 'clear')
     WhatAppOpen = input("_________________________________\nNavegadores(Exibe lista de navegadors)\nNavegador P(Padrão)\nSpotify\nDeepl\nAbrir um site\nSpeedtest\nQual destes acima deseja iniciar? ")
     os.system('cls' if os.name == 'nt' else 'clear')
-    if WhatAppOpen.lower() == 'navegadores':
-        BrownserOps = input("            Google\n            OperaGX\n            Edge\nQual dos navegadores disponiveis acima deseja? ")
-        if BrownserOps.lower() == 'google' :
-            caminho_aplicativo = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
-            os.startfile(caminho_aplicativo)
-            print("\nAbrindo Google chorome....")
-        elif BrownserOps.lower() in ['OperaGx','OperaGx']:
-            caminho_aplicativo = r"C:\Users\hoolf\AppData\Local\Programs\Opera GX\launcher.exe"
-            os.startfile(caminho_aplicativo)
-            print("\nAbrindo Opera Gx....")
-        else:
-            def openteams():
+    def navegs():
+        if WhatAppOpen.lower() == 'navegadores':
+            os.system('cls' if os.name == 'nt' else 'clear')
+            BrownserOps = input("Google\nOperaGX\nEdge\nQual dos navegadores disponiveis acima deseja? ")
+            if BrownserOps.lower() == 'google' :
+                os.startfile(r"C:\Program Files\Google\Chrome\Application\chrome.exe")
+                print("\nAbrindo Google chorome....")
+            elif BrownserOps.lower() in ['opera gx','operagx']:
+                os.startfile(r"C:\Users\hoolf\AppData\Local\Programs\Opera GX\launcher.exe")
+                print("\nAbrindo Opera Gx....")
+            else:
                 pyperclip.copy("goncalves1807")
-                teams_url = "https://teams.microsoft.com/_?culture=pt-br&country=br#/school/teams-grid/General?ctx=teamsGrid"
-                edge = r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
-                webbrowser.get(edge).open(teams_url)
-            print('\nAbrindo Microsoft Edge.....')
-        if __name__ == "__main__":
-            openteams()    
-    elif WhatAppOpen.lower() == 'Navegador P(Padrão)':
-        caminho_aplicativo = r"C:\Users\hoolf\AppData\Local\Programs\Opera GX\launcher.exe"
-        os.startfile(caminho_aplicativo)
+                webbrowser.get(r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe").open("https://teams.microsoft.com/_?culture=pt-br&country=br#/school/teams-grid/General?ctx=teamsGrid")
+                print('\nAbrindo Microsoft Edge.....')
+    while True:
+        navegs()
+        restartcont = input("\nDeseja abrir outro navegador? ")
+        if not restartcont.lower() in ['yes','sim','1']:
+            print("________________________\n")
+            break
+    if WhatAppOpen.lower() == 'Navegador P(Padrão)':
+        os.startfile(r"C:\Users\hoolf\AppData\Local\Programs\Opera GX\launcher.exe")
         print("\nAbrindo Opera Gx....")
-    elif WhatAppOpen.lower() in ['discord','dc']:
-        FileLocation = r"C:\Users\hoolf\Desktop\aplicativos\Apps em geral\Discord"
-        os.startfile(FileLocation)
-        print("\nAbrindo discord....")
-    elif WhatAppOpen.lower() == 'spotify':
-        caminho_aplicativo = r"C:\Users\hoolf\AppData\Roaming\Spotify\Spotify.exe"
-        os.startfile(caminho_aplicativo)
+    if WhatAppOpen.lower() == 'spotify':
+        os.startfile(r"C:\Users\hoolf\AppData\Roaming\Spotify\Spotify.exe")
         print("\nAbrindo spotify....")
-    elif WhatAppOpen.lower() == 'deepl':
-        caminho_aplicativo = r"C:\Users\hoolf\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\DeepL"
-        os.startfile(caminho_aplicativo)
+    if WhatAppOpen.lower() == 'deepl':
+        os.startfile(r"C:\Users\hoolf\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\DeepL")
         print("\nAbrindo Deepl....")
-    elif WhatAppOpen.lower() == 'speedtest':
-        OpenApp = r"C:\Program Files\Speedtest\Speedtest.exe"
-        os.startfile(OpenApp)
+    if WhatAppOpen.lower() == 'speedtest':
+        os.startfile(r"C:\Program Files\Speedtest\Speedtest.exe")
         print("\nAbrindo speedtest")
-    elif WhatAppOpen.lower() == 'site':
+    if WhatAppOpen.lower() == 'site':
         web = input("Digite a url")
         webbrowser.open(web)
         print(f"\nAbrindo o site:{web}")
 while True:
     whatappopen()
-    restartcont = input("\nDeseja abrir outro aplicativo? (Yes/No): ")
-    if restartcont.lower() != 'yes':
+    restartcont = input("\nDeseja abrir outro aplicativo? ")
+    if not restartcont.lower() in ['yes','sim','1']:
         print('___________________\nComando finalizado')
         break
