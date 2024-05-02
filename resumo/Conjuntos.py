@@ -107,4 +107,7 @@ while True:
     resetcode = input("Desejá fazer outra operação? ")
     Del = input("Desejá limpar as contas anteriores? ")
     if Del.lower() in ['sim','yes','1']:
-        os.s
+        os.system('cls' if os.name == 'nt' else 'clear')
+    if not resetcode.lower in ['sim','yes','1']:
+        print("________\nCodigo finalizado!")
+        break
