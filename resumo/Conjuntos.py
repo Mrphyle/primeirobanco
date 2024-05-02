@@ -1,157 +1,110 @@
 import os
-def ResetCode():
-    ops = input("\n____________\nQuantidade de Subconjunto(OBS:se escrever somente subconjunto também vai)\nAuB\nAnB\ncomplemento\nDigite qual conjunto desejá: ")
-    if ops.lower() in ['Quantidade de Subconjunto','subconjunto']:
-        def sub():
-            opsc1 = int(input("Desejá quantos elementos? "))
+def codereset():
+    ops = input("subjuntos\nAub\nAnb\ncomplemento\nQual deseja das opições? ")
+    if ops.lower() == 'subconjunto':
+        def subconjunto():
+            ops1 = int(input("Desejá quantos elementos? "))
             A = set()
-            for i in range(opsc1):
-                save1 = int(input("Digite o elemento que deseja: "))
-                A.add(save1)
-            subconjunte= len(A)
-            print(f"A={A}\nQuantidade de subconjunto = 2**{subconjunte} = {2**subconjunte}")
+            for i in range(ops1):
+                save = int(input("Digite o elemento: "))
+                A.add(save)
+            Subconjunto = len(A)
+            print(f"{A}\nQuantindade de subconjunto é igual 2**{Subconjunto} ={2**Subconjunto}")
         while True:
-            sub()
-            Del = input("Ddeseja deletar o que já foi feito? ")
-            if Del.lower()  in ['sim','yes','1']:
-                os.system('cls' if os.name == 'nt' else 'clear')
-            rescont = input("Desejá refazer este tipo de conjunto? ")
-            if not rescont.lower() in ['sim','yes','1']:
+            subconjunto()
+            restcont = input("Deseja realizar a conta novamente? ")
+            if not restcont.lower() in ['sim','yes','1']:
                 break
     elif ops.lower() == 'aub':
-        def aub():
-            CAbc = input("_____________\nAuB ou AuBuC\nQual união desejá: ")
-            if CAbc == 'aub':
-                opsc1 = int(input("Desejá quantos elementos no  conjunto A? "))
+        def AUB():    
+            typeaub = input("AuB ou AuBuC\nDesejá fazer qual das opiçoes a cima? ")
+            if typeaub.lower() == 'aub':
+                ops1 = int(input("Desejá quantos elementos? "))
                 A = set()
-                for i in range(opsc1):
-                    save1 = int(input("Digite o elemento que deseja: "))
+                for i in range(ops1):
+                    save1 = int(input("Digite o elemento: "))
                     A.add(save1)
-                opsc2 = int(input("Desejá quantos elementos no conjunto B? "))
+                ops2 = int(input("Desejá quantos elementos? "))
                 B = set()
-                for i in range(opsc2):
-                    save2 = int(input("Digite o elemento que deseja: "))
+                for i in range(ops2):
+                    save2 = int(input("Digite o elemento: "))
                     B.add(save2)
-                R = A.union(B)
-                print(R)
-            elif CAbc == 'aubuc':
-                opsc1 = int(input("Desejá quantos elementos no  conjunto A? "))
+                print(f"A= {A}\nB={B}\nAUB={A.union(B)}")
+            elif typeaub.lower() == 'aubuc':
+                ops1 = int(input("Desejá quantos elementos? "))
                 A = set()
-                for i in range(opsc1):
-                    save1 = int(input("Digite o elemento que deseja: "))
+                for i in range(ops1):
+                    save1 = int(input("Digite o elemento: "))
                     A.add(save1)
-                opsc2 = int(input("Desejá quantos elementos no conjunto B? "))
+                ops2 = int(input("Desejá quantos elementos? "))
                 B = set()
-                for i in range(opsc2):
-                    save2 = int(input("Digite o elemento que deseja: "))
+                for i in range(ops2):
+                    save2 = int(input("Digite o elemento: "))
                     B.add(save2)
-                opsc3 = int(input("Desejá quantos elementos no conjunto C? "))
                 C = set()
-                for i in range(opsc3):
-                    save3 = int(input("Digite o elemento que deseja: "))
+                ops3 = int(input("Desejá quantos elementos? "))
+                for i in range(ops3):
+                    save3 = int(input("Digite o elemento: "))
                     C.add(save3)
-                R = A.union(B and C)
-                print(R)
+                print(f"A= {A}\nB={B}\nC={C}\nAUB={A.union(B and C)}")
         while True:
-            aub()
-            Del = input("Ddeseja deletar o que já foi feito? ")
-            if Del.lower()  in ['sim','yes','1']:
-                os.system('cls' if os.name == 'nt' else 'clear')
-            rescont = input("Desejá refazer este tipo de conjunto? ")
-            if not rescont.lower() in ['sim','yes','1']:
+            AUB()
+            restcont = input("Deseja realizar a conta novamente? ")
+            if not restcont.lower() in ['sim','yes','1']:
                 break
     elif ops.lower() == 'anb':
-        def anb():
-            CAbc = input("_____________\nAnB ou AnBnC\nQual desejá interceder? ")
-            if CAbc == 'anb':
-                opsc1 = int(input("Desejá quantos elementos no  conjunto A? "))
+        def ANB():
+            typeanb = input("AnB ou AnBnC\nDesejá fazer qual das opiçoes a cima? ")
+            if typeanb.lower() == 'anb':
+                ops1 = int(input("Desejá quantos elementos? "))
                 A = set()
-                for i in range(opsc1):
-                    save1 = int(input("Digite o elemento que deseja: "))
+                for i in range(ops1):
+                    save1 = int(input("Digite o elemento: "))
                     A.add(save1)
-                opsc2 = int(input("Desejá quantos elementos no conjunto B? "))
+                ops2 = int(input("Desejá quantos elementos? "))
                 B = set()
-                for i in range(opsc2):
-                    save2 = int(input("Digite o elemento que deseja: "))
+                for i in range(ops2):
+                    save2 = int(input("Digite o elemento: "))
                     B.add(save2)
-                R = A.intersection(B)
-                print(R)
-            elif CAbc == 'anbnc':
-                opsc1 = int(input("Desejá quantos elementos no  conjunto A? "))
+                print(f"A= {A}\nB={B}\nAUB={A.intersection(B)}")
+            elif typeanb.lower() == 'anbnc':
+                ops1 = int(input("Desejá quantos elementos? "))
                 A = set()
-                for i in range(opsc1):
-                    save1 = int(input("Digite o elemento que deseja: "))
+                for i in range(ops1):
+                    save1 = int(input("Digite o elemento: "))
                     A.add(save1)
-                opsc2 = int(input("Desejá quantos elementos no conjunto B? "))
+                ops2 = int(input("Desejá quantos elementos? "))
                 B = set()
-                for i in range(opsc2):
-                    save2 = int(input("Digite o elemento que deseja: "))
+                for i in range(ops2):
+                    save2 = int(input("Digite o elemento: "))
                     B.add(save2)
-                opsc3 = int(input("Desejá quantos elementos no conjunto C? "))
+                ops3 = int(input("Desejá quantos elementos? "))
                 C = set()
-                for i in range(opsc3):
-                    save3 = int(input("Digite o elemento que deseja: "))
+                for i in range(ops3):
+                    save3 = int(input("Digite o elemento: "))
                     C.add(save3)
-                R = A.intersection(B and C)
-                print(R)
+                print(f"A= {A}\nB={B}\nC={C}\nAUB={A.intersection(B and C)}")
         while True:
-            anb()
-            Del = input("Ddeseja deletar o que já foi feito? ")
-            if Del.lower()  in ['sim','yes','1']:
-                os.system('cls' if os.name == 'nt' else 'clear')
-            rescont = input("Desejá refazer este tipo de conjunto? ")
-            if not rescont.lower() in ['sim','yes','1']:
-                break            
+            ANB()
+            restcont = input("Deseja realizar a conta novamente? ")
+            if not restcont.lower() in ['sim','yes','1']:
+                break
     elif ops.lower() == 'complemento':
         def comp():
-            TypeC = input("__________________\nAeB\nBeC\nAeC\nQuer fazer complemento com quais conjuntos? ")
-            if TypeC.lower() == 'aeb':
-                opsc1 = int(input("Desejá quantos elementos no conjunto A? "))
-                A = set()
-                for i in range(opsc1):
-                    save1 = int(input("Digite o elemento que deseja: "))
-                    A.add(save1)
-                opsc2 = int(input("Desejá quantos elementos no conjunto B? "))
-                B = set()
-                for i in range(opsc2):
-                    save2 = int(input("Digite o elemento que deseja: "))
-                    B.add(save2)
-                print(f"A = {sorted(A)}\nB = {sorted(B)}\nO complemento é {sorted(A - B)}")
-            elif TypeC.lower() == 'bec':
-                opsc1 = int(input("Desejá quantos elementos no conjunto B? "))
-                B = set()
-                for i in range(opsc1):
-                    save1 = int(input("Digite o elemento que deseja: "))
-                    B.add(save1)
-                opsc2 = int(input("Desejá quantos elementos no conjunto C? "))
-                C = set()
-                for i in range(opsc2):
-                    save2 = int(input("Digite o elemento que deseja: "))
-                    C.add(save2)
-                print(f"B = {sorted(B)}\nc = {sorted(C)}\nO complemento é {sorted(B - C)}")
-            elif TypeC.lower() == 'aec':
-                opsc1 = int(input("Desejá quantos elementos no conjunto A? "))
-                A = set()
-                for i in range(opsc1):
-                    save1 = int(input("Digite o elemento que deseja: "))
-                    A.add(save1)
-                opsc2 = int(input("Desejá quantos elementos no conjunto C? "))
-                C = set()
-                for i in range(opsc2):
-                    save2 = int(input("Digite o elemento que deseja: "))
-                    C.add(save2)
-                print(f"A = {sorted(A)}\nC = {sorted(C)}\nO complemento é {sorted(A - C)}")
-        while True:
-            comp()
-            Del = input("Deseja deletar o que já foi feito? ")
-            if Del.lower()  in ['sim','yes','1']:
-                os.system('cls' if os.name == 'nt' else 'clear')                
-            rescont = input("Desejá refazer este tipo de conjunto? ")
-            if not rescont.lower() in ['sim','yes','1']:
-                break             
+            ops1 = int(input("Desejá quantos elementos? "))
+            A = set()
+            for i in range(ops1):
+                save1 = int(input("Digite o elemento: "))
+                A.add(save1)
+            ops2 = int(input("Desejá quantos elementos? "))
+            B = set()
+            for i in range(ops2):
+                save2 = int(input("Digite o elemento: "))
+                B.add(save2)
+            print(f"A= {A}\nB={B}\nAUB={(A - B)}")
 while True:
-    ResetCode()
-    resetcode = input("Deseja executar o codigo novamente? ")
-    if not resetcode.lower() in ['sim','yes']:
-        print("____________\n Codigo Finalizado!")
-        break
+    codereset()
+    resetcode = input("Desejá fazer outra operação? ")
+    Del = input("Desejá limpar as contas anteriores? ")
+    if Del.lower() in ['sim','yes','1']:
+        os.s
