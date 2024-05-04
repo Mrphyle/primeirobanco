@@ -6,8 +6,8 @@ def whatappopen():
     os.system('cls' if os.name == 'nt' else 'clear')
     WhatAppOpen = input("_________________________________\nNavegadores(Exibe lista de navegadors)\nNavegador P(Padrão)\nSpotify\nDeepl\nAbrir um site\nSpeedtest\nQual destes acima deseja iniciar? ")
     os.system('cls' if os.name == 'nt' else 'clear')
-    def navegs():
-        if WhatAppOpen.lower() == 'navegadores':
+    if WhatAppOpen.lower() == 'navegadores':
+        def navegs():
             os.system('cls' if os.name == 'nt' else 'clear')
             BrownserOps = input("Google\nOperaGX\nEdge\nQual dos navegadores disponiveis acima deseja? ")
             if BrownserOps.lower() == 'google' :
@@ -20,12 +20,12 @@ def whatappopen():
                 pyperclip.copy("goncalves1807")
                 webbrowser.get(r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe").open("https://teams.microsoft.com/_?culture=pt-br&country=br#/school/teams-grid/General?ctx=teamsGrid")
                 print('\nAbrindo Microsoft Edge.....')
-    while True:
-        navegs()
-        restartcont = input("\nDeseja abrir outro navegador? ")
-        if not restartcont.lower() in ['yes','sim','1']:
-            print("________________________\n")
-            break
+        while True:
+            navegs()
+            restartcont = input("\nDeseja abrir outro navegador? ")
+            if not restartcont.lower() in ['yes','sim','1']:
+                print("________________________\n")
+                break
     if WhatAppOpen.lower() == 'Navegador P(Padrão)':
         os.startfile(r"C:\Users\hoolf\AppData\Local\Programs\Opera GX\launcher.exe")
         print("\nAbrindo Opera Gx....")
