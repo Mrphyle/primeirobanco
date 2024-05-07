@@ -1,6 +1,6 @@
 import os
 import webbrowser
-import pyperclip
+import pyperclip as ctrlC
 def whatappopen():
     pyperclip.copy("https://chat.openai.com/")
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -17,8 +17,9 @@ def whatappopen():
                 os.startfile(r"C:\Users\hoolf\AppData\Local\Programs\Opera GX\launcher.exe")
                 print("\nAbrindo Opera Gx....")
             else:
-                pyperclip.copy("goncalves1807")
-                webbrowser.get(r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe").open("https://teams.microsoft.com/_?culture=pt-br&country=br#/school/teams-grid/General?ctx=teamsGrid")
+                
+                ctrlC.copy("goncalves1807")
+                
                 print('\nAbrindo Microsoft Edge.....')
         while True:
             navegs()
