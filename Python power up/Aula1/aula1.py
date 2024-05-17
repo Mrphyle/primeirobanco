@@ -4,7 +4,7 @@ import pyautogui as pyauto
 import time
 import pandas as pd
 #abrir sistema
-app,web = r"C:\Program Files\Google\Chrome\Application\chrome.exe",r"https://dlp.hashtagtreinamentos.com/python/intensivao/login"
+app,web = (r"C:\Program Files\Google\Chrome\Application\chrome.exe"),(r"https://dlp.hashtagtreinamentos.com/python/intensivao/login")
 os.startfile(app)
 time.sleep(10)
 pyauto.write(web)
