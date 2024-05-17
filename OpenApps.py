@@ -1,10 +1,12 @@
 import os
+import time
 import webbrowser
-import pyperclip as ctrlC
+import pyperclip as pc
+import pyautogui as pa
 def whatappopen():
-    pyperclip.copy("https://chat.openai.com/")
+    pc.copy("https://chat.openai.com/")
     os.system('cls' if os.name == 'nt' else 'clear')
-    WhatAppOpen = input("_________________________________\nNavegadores(Exibe lista de navegadors)\nNavegador P(Padrão)\nSpotify\nDeepl\nAbrir um site\nSpeedtest\nQual destes acima deseja iniciar? ")
+    WhatAppOpen = input("_________________________________\nNavegadores(Exibe lista de navegadors)\nNavegador P(Padrão)\nSpotify\nDeepl\nAbrir um site\nSpeedtest\nAudacity\nQual destes acima deseja iniciar? ")
     os.system('cls' if os.name == 'nt' else 'clear')
     if WhatAppOpen.lower() == 'navegadores':
         def navegs():
@@ -16,18 +18,13 @@ def whatappopen():
             elif BrownserOps.lower() in ['opera gx','operagx']:
                 os.startfile(r"C:\Users\hoolf\AppData\Local\Programs\Opera GX\launcher.exe")
                 print("\nAbrindo Opera Gx....")
-            else:
-                
-                ctrlC.copy("goncalves1807")
-                
-                print('\nAbrindo Microsoft Edge.....')
         while True:
             navegs()
             restartcont = input("\nDeseja abrir outro navegador? ")
             if not restartcont.lower() in ['yes','sim','1']:
                 print("________________________\n")
                 break
-    if WhatAppOpen.lower() == 'Navegador P(Padrão)':
+    if WhatAppOpen.lower() == 'navegador p':
         os.startfile(r"C:\Users\hoolf\AppData\Local\Programs\Opera GX\launcher.exe")
         print("\nAbrindo Opera Gx....")
     if WhatAppOpen.lower() == 'spotify':
@@ -39,10 +36,30 @@ def whatappopen():
     if WhatAppOpen.lower() == 'speedtest':
         os.startfile(r"C:\Program Files\Speedtest\Speedtest.exe")
         print("\nAbrindo speedtest")
-    if WhatAppOpen.lower() == 'site':
-        web = input("Digite a url")
-        webbrowser.open(web)
-        print(f"\nAbrindo o site:{web}")
+    if WhatAppOpen.lower() == 'abrir site':
+        webs = input("\nRadio Garden\nDigite um destes sites acima ou digite uma url: ")
+        if webs.lower() == 'radio garden':
+            web = "https://radio.garden/listen/country-101-1/B34md32h"
+            webbrowser.open(web)
+            print(f"\nAbrindo o site:{webs}")
+        elif webs.lower() == 'teams':
+            pc.copy("goncalves1807")
+            web = "teams.microsoft.com/v2/#/school/teams-grid/General?ctx=teamsGrid"
+            pa.hotkey('alt','tab')
+            pa.hotkey('ctrl','t')
+            time.sleep(2)
+            pa.write(web)
+            pa.hotkey('enter')
+            time.sleep(30)
+            pa.click(x=1861, y=137)
+            time.sleep(10)
+            pa.click(x=1128, y=553)
+            time.sleep(30)
+            pa.click(x=70, y=350)
+            print(f"\nAbrindo o site:{webs}")
+    if WhatAppOpen.lower() == 'audacity':
+        os.startfile(r"C:\Program Files\Audacity\Audacity.exe")
+        print("\nAbrindo audacity....")
 while True:
     whatappopen()
     restartcont = input("\nDeseja abrir outro aplicativo? ")
