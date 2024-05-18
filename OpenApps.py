@@ -3,50 +3,51 @@ import time
 import webbrowser
 import pyperclip as pc
 import pyautogui as pa
-def whatappopen():
+def whatsappopen():
     pc.copy("https://chat.openai.com/")
     os.system('cls' if os.name == 'nt' else 'clear')
-    WhatAppOpen = input("_________________________________\nNavegadores(Exibe lista de navegadors)\nNavegador P(Padrão)\nSpotify\nDeepl\nAbrir um site\nSpeedtest\nAudacity\nQual destes acima deseja iniciar? ")
+    WhatsAppOpen = input("_________________________________\nBrowsers(List of browsers)\nBrowser P(Default)\nSpotify\nDeepl\nOpen a website\nSpeedtest\nAudacity\nWhich of the above do you want to start? ")
     os.system('cls' if os.name == 'nt' else 'clear')
-    if WhatAppOpen.lower() == 'navegadores':
-        def navegs():
+    if WhatsAppOpen.lower() == 'browsers':
+        def navigations():
             os.system('cls' if os.name == 'nt' else 'clear')
-            BrownserOps = input("Google\nOperaGX\nEdge\nQual dos navegadores disponiveis acima deseja? ")
-            if BrownserOps.lower() == 'google' :
+            BrowserOptions = input("Google\nOperaGX\nEdge\nWhich of the available browsers above do you want? ")
+            if BrowserOptions.lower() == 'google' :
                 os.startfile(r"C:\Program Files\Google\Chrome\Application\chrome.exe")
-                print("\nAbrindo Google chorome....")
-            elif BrownserOps.lower() in ['opera gx','operagx']:
+                print("\nOpening Google Chrome....")
+            elif BrowserOptions.lower() in ['opera gx', 'operagx']:
                 os.startfile(r"C:\Users\hoolf\AppData\Local\Programs\Opera GX\launcher.exe")
-                print("\nAbrindo Opera Gx....")
+                print("\nOpening Opera Gx....")
         while True:
-            navegs()
-            restartcont = input("\nDeseja abrir outro navegador? ")
-            if not restartcont.lower() in ['yes','sim','1']:
+            navigations()
+            restartcont = input("\nDo you want to open another browser? ")
+            if not restartcont.lower() in ['yes', 'no', '1']:
                 print("________________________\n")
                 break
-    if WhatAppOpen.lower() == 'navegador p':
+    if WhatsAppOpen.lower() == 'p browser':
         os.startfile(r"C:\Users\hoolf\AppData\Local\Programs\Opera GX\launcher.exe")
-        print("\nAbrindo Opera Gx....")
-    if WhatAppOpen.lower() == 'spotify':
+        print("\nOpening Opera Gx....")
+    if WhatsAppOpen.lower() == 'spotify':
         os.startfile(r"C:\Users\hoolf\AppData\Roaming\Spotify\Spotify.exe")
-        print("\nAbrindo spotify....")
-    if WhatAppOpen.lower() == 'deepl':
+        print("\nOpening Spotify....")
+    if WhatsAppOpen.lower() == 'deepl':
         os.startfile(r"C:\Users\hoolf\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\DeepL")
-        print("\nAbrindo Deepl....")
-    if WhatAppOpen.lower() == 'speedtest':
+        print("\nOpening DeepL....")
+    if WhatsAppOpen.lower() == 'speedtest':
         os.startfile(r"C:\Program Files\Speedtest\Speedtest.exe")
-        print("\nAbrindo speedtest")
-    if WhatAppOpen.lower() == 'abrir site':
-        webs = input("\nRadio Garden\nDigite um destes sites acima ou digite uma url: ")
-        if webs.lower() == 'radio garden':
+        print("\nOpening Speedtest")
+    if WhatsAppOpen.lower() == 'open site':
+        websites = input("\nRadio Garden\nEnter one of these sites above or type a URL: ")
+        if websites.lower() == 'radio garden':
             web = "https://radio.garden/listen/country-101-1/B34md32h"
             webbrowser.open(web)
-            print(f"\nAbrindo o site:{webs}")
-        elif webs.lower() == 'teams':
+            print(f"\nOpening the site: {websites}")
+        elif websites.lower() == 'teams':
             pc.copy("goncalves1807")
             web = "teams.microsoft.com/v2/#/school/teams-grid/General?ctx=teamsGrid"
-            pa.hotkey('alt','tab')
-            pa.hotkey('ctrl','t')
+            pa.hotkey('alt', 'tab')
+            time.sleep(1)
+            pa.hotkey('ctrl', 't')
             time.sleep(2)
             pa.write(web)
             pa.hotkey('enter')
@@ -56,13 +57,13 @@ def whatappopen():
             pa.click(x=1128, y=553)
             time.sleep(30)
             pa.click(x=70, y=350)
-            print(f"\nAbrindo o site:{webs}")
-    if WhatAppOpen.lower() == 'audacity':
+            print(f"\nOpening the site: {websites}")
+    if WhatsAppOpen.lower() == 'audacity':
         os.startfile(r"C:\Program Files\Audacity\Audacity.exe")
-        print("\nAbrindo audacity....")
+        print("\nOpening Audacity....")
 while True:
-    whatappopen()
-    restartcont = input("\nDeseja abrir outro aplicativo? ")
-    if not restartcont.lower() in ['yes','sim','1']:
-        print('___________________\nComando finalizado')
+    whatsappopen()
+    restartcont = input("\nDo you want to open another application? ")
+    if not restartcont.lower() in ['yes', 'no', '1']:
+        print('___________________\nCommand completed')
         break
