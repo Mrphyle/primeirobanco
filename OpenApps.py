@@ -24,7 +24,7 @@ def whatsappopen():
             if not restartcont.lower() in ['yes', 'no', '1']:
                 print("________________________\n")
                 break
-    if WhatsAppOpen.lower() == 'p browser':
+    if WhatsAppOpen.lower() == 'browser p':
         os.startfile(r"C:\Users\hoolf\AppData\Local\Programs\Opera GX\launcher.exe")
         print("\nOpening Opera Gx....")
     if WhatsAppOpen.lower() == 'spotify':
@@ -58,12 +58,17 @@ def whatsappopen():
             time.sleep(30)
             pa.click(x=70, y=350)
             print(f"\nOpening the site: {websites}")
+        else:
+            webbrowser.open(websites)
     if WhatsAppOpen.lower() == 'audacity':
         os.startfile(r"C:\Program Files\Audacity\Audacity.exe")
         print("\nOpening Audacity....")
 while True:
     whatsappopen()
     restartcont = input("\nDo you want to open another application? ")
-    if not restartcont.lower() in ['yes', 'no', '1']:
+    if restartcont.lower() in ['yes', 'y', '1']:
+        print('___________________\nCommand completed')
+        continue
+    else:
         print('___________________\nCommand completed')
         break
