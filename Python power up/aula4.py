@@ -23,5 +23,6 @@ def main(pag):
     pag.add(catlistp,Categoria)
     #valor
     #enviar tudo para um banco de dados
+    
     enviar = ft.ElevatedButton("Enviar")
 ft.app(main)#,view=ft.WEB_BROWSER)
