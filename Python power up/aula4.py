@@ -1,4 +1,5 @@
 import flet as ft
+import mysql.connector as sqc
 #Titulo Registro de produto
 def main(pag):
     #Titulo Registro de produto
@@ -23,6 +24,6 @@ def main(pag):
     pag.add(catlistp,Categoria)
     #valor
     #enviar tudo para um banco de dados
+    enviarbut = ft.ElevatedButton("Enviar")
     
-    enviar = ft.ElevatedButton("Enviar")
 ft.app(main)#,view=ft.WEB_BROWSER)
