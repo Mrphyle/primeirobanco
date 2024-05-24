@@ -67,7 +67,6 @@ while True:
     whatsappopen()
     restartcont = input("\nDo you want to open another application? ")
     if restartcont.lower() in ['yes', 'y', '1']:
-        print('___________________\nCommand completed')
         continue
     else:
         print('___________________\nCommand completed')

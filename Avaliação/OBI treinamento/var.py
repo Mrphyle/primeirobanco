@@ -1,8 +1,8 @@
-EntradaDoAppX = input("Digite o primeiro numero: ")
-EntradaDoAppY = input("Digite o segundo numero: ")
+EntradaDoAppX = int(input("Digite o primeiro numero: "))
+EntradaDoAppY = int(input("Digite o segundo numero: "))
 campoX = 8
 campoY = 16
-if campoX<=8 and campoX>=0 and campoY<=16 and campoY>=0:
+if EntradaDoAppX<=campoX and EntradaDoAppX>=0 and EntradaDoAppY<=campoY and EntradaDoAppY>=0:
     print("S")
 else:
     print("N")
