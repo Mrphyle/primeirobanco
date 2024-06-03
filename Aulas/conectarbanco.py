@@ -27,5 +27,11 @@ ALTER TABLE Aluguel_Cliente_Items_da_festa_Tema_da_festa ADD CONSTRAINT FK_Alugu
 import mysql.connector as sqc
 try:
     conexção = sqc.connect(
-        host = 'localhost'
-        user = 'root'
+        host = 'localhost',
+        user = 'root',
+        password = "",
+        database = 'mrphyledatabase',
+    )
+    print("conectado com susseso!")
+except:
+    print("Não foi possivel se conectar")
