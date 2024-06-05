@@ -10,8 +10,12 @@ class Buttontype:
         chromefile = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
         os.startfile(chromefile)
     @staticmethod
+    def Drive_location():
+        drivefile = r"C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Google Drive.lnk"
+        os.startfile(drivefile)
+    @staticmethod
     def Obs_location():
-        obsfile = r"C:\Program Files\obs-studio\bin\64bit\obs64.exe"
+        obsfile = r"C:\Users\Public\Desktop\OBS Studio.lnk"
         os.startfile(obsfile)
     @staticmethod
     def Wallpaperengine_location():
@@ -51,11 +55,14 @@ title_text.configure(state='disabled')
 spotify_button = tk.Button(root, text="Spotify", command=Buttontype.spotify_location, **button_style)
 spotify_button.place(x=20,y=1*75)
 # Chrome
-chrome_button = tk.Button(root, text="Google Chrome", command=Buttontype.chrome_location, **button_style)
+chrome_button = tk.Button(root, text="Google\nChrome", command=Buttontype.chrome_location, **button_style)
 chrome_button.place(x=20,y=2*75)
+#Drive
+drive_button = tk.Button(root,text="Google\nDrive",command=Buttontype.Drive_location,**button_style)
+drive_button.place(x=20,y=3*75)
 #Obs_location
 obs_button = tk.Button(root,text="OBS",command=Buttontype.Obs_location,**button_style)
-obs_button.place(x=20,y=3*75)
+obs_button.place(x=20,y=4*75)
 #wallpaperengine
 wallpprengbutton = tk.Button(root,text="wallpaper\nengine",command=Buttontype.Wallpaperengine_location,**button_style)
 wallpprengbutton.place(x=225,y=3*75)
