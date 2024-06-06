@@ -1,5 +1,7 @@
 import os
 import tkinter as tk
+import pyautogui as pa
+import pyperclip as pc
 class Buttontype:
     @staticmethod
     def spotify_location():
@@ -33,6 +35,21 @@ class Buttontype:
     def steam_locate():
         steamfile= r"C:\Program Files (x86)\Steam\steam.exe"
         os.startfile(steamfile)
+    @staticmethod
+    def mine_location():
+        minefile = r"C:\XboxGames\Minecraft Launcher\Content\Minecraft.exe"
+        os.startfile(minefile)
+    @staticmethod
+    def teams_open():
+        browser= r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
+        web="https://teams.microsoft.com/v2/"
+        os.startfile(browser)
+        pa.write(web)
+        pa.hotkey("enter")
+        pc.copy("goncalves1807")
+    @staticmethod
+    def taskmng_comand():
+        pa.hotkey('ctrl','shift','esc')
 # Criar a janela principal
 root = tk.Tk()
 root.geometry("800x600")
@@ -63,16 +80,25 @@ drive_button.place(x=20,y=3*75)
 #Obs_location
 obs_button = tk.Button(root,text="OBS",command=Buttontype.Obs_location,**button_style)
 obs_button.place(x=20,y=4*75)
-#wallpaperengine
-wallpprengbutton = tk.Button(root,text="wallpaper\nengine",command=Buttontype.Wallpaperengine_location,**button_style)
-wallpprengbutton.place(x=225,y=3*75)
 #clipstudio
 clipstudiopaint_button = tk.Button(root, text="ClipStudio\nPaint",command=Buttontype.Clippaint_location, **button_style)
 clipstudiopaint_button.place(x=225,y=75)
 #huionsoftuware
-huionhs64_button = tk.Button(root,text="Huion hs64\nSoftuware",command=Buttontype.Huionh64_locate,**button_style)
+huionhs64_button = tk.Button(root,text="Huion hs64\nSoftware",command=Buttontype.Huionh64_locate,**button_style)
 huionhs64_button.place(x=225,y=2*75)
+#wallpaperengine
+wallpprengbutton = tk.Button(root,text="wallpaper\nengine",command=Buttontype.Wallpaperengine_location,**button_style)
+wallpprengbutton.place(x=225,y=3*75)
 #steam
-steam_button = tk.Button(root,text="Steam",command=Buttontype.steam_locate,**button_style)
+steam_button = tk.Button(root,text="Steam",command=Buttontype.steam_locate,**button_style)  
 steam_button.place(x=225,y=4*75)
+#taskmanager
+taksmng_button = tk.Button(root,text="task manager",command=Buttontype.taskmng_comand,**button_style)
+taksmng_button.place(x=430,y=2*75)
+#teams
+teams_button= tk.Button(root, text="Teams",command=Buttontype.teams_open,**button_style)
+teams_button.place(x=430,y=3*75)
+#minecraft
+mine_button= tk.Button(root,text="Minecraft\nLauncher",command=Buttontype.mine_location,**button_style)
+mine_button.place(x=430,y=4*75)
 root.mainloop()
