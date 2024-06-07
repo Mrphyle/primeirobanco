@@ -2,10 +2,10 @@ import mysql.connector as sqc
 import pandas as pd
 from sqlalchemy import create_engine
 config = {
-    'user':'hoolf',
-    'password':'0718',
+    'user':'root',
+    'password':'',
     'host': 'localhost',
-    'database': 'mrphyledatabase'
+    'database': 'ruby'
 }
 conect = sqc.connect(**config)
 query = "SELECT * FROM "

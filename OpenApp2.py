@@ -1,4 +1,5 @@
 import os
+import time
 import tkinter as tk
 import pyautogui as pa
 import pyperclip as pc
@@ -44,6 +45,7 @@ class Buttontype:
         browser= r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
         web="https://teams.microsoft.com/v2/"
         os.startfile(browser)
+        time.sleep(5)
         pa.write(web)
         pa.hotkey("enter")
         pc.copy("goncalves1807")
