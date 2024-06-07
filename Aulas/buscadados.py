@@ -1,6 +1,5 @@
 import mysql.connector as sqc
 import pandas as pd
-from sqlalchemy import create_engine
 config = {
     'user':'root',
     'password':'',

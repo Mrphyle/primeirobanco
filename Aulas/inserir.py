@@ -1,15 +1,10 @@
 import mysql.connector as sqc
-class colunsandsqlcodes:
-    def Colunas():
-        Marca =	input("Digite o nome da marca: ")
-        tipo_do_produto	= input("Digite o tipo do produto: ")
-        Codigo_de_barras = int(input("Digite o codigo de barras do produto: "))
-        descrição =	input("faça a descrição do produto: ")
-        valor = float(input("Digite o valor: "))
-        return Marca,tipo_do_produto,Codigo_de_barras 
-    def sqlcodes():
-        insert_marca= "INSERT INTO produto"
-        return insert_marca
+import pandas as pd
+Marca =	input("Digite o nome da marca: ")
+tipo_do_produto	= input("Digite o tipo do produto: ")
+Codigo_de_barras = int(input("Digite o codigo de barras do produto: "))
+descrição =	input("faça a descrição do produto: ")
+valor = float(input("Digite o valor: "))
 try:
     conexção = sqc.connect(
         host = 'localhost',
@@ -17,6 +12,13 @@ try:
         password = "",
         database = 'mrphyledatabase',
     )
-    print("conectado com susseso!")
+    cursor = conexção.cursor()
+    comand_sql= f"INSERT INTO produto(Marca,tipo_do_produto,Codigo_de_barras,descrição,valor) VALUES({Marca},{tipo_do_produto},{Codigo_de_barras},{descrição},{valor})"
+    cursor.execute(comand_sql)
+    conexção.commit()
+    print()
 except:
     print("Não foi possivel se conectar")
+finally:
+    cursor.close()
+    conexção.close()
