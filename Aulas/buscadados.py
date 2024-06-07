@@ -8,7 +8,7 @@ config = {
     'database': 'ruby'
 }
 conect = sqc.connect(**config)
-query = "SELECT * FROM "
+query = "SELECT * FROM"
 df = pd.read_sql_query(query, conect)
 print("Dados lidos do banco de dados:")
 print(df.head())
