@@ -33,7 +33,7 @@ class Buttontype:
         huionhs64file = r"C:\Program Files\HuionTablet\HuionTablet.exe"
         os.startfile(huionhs64file)
     @staticmethod
-    def steam_locate():
+    def steam_locate(): #lucasdamanga #123456
         steamfile= r"C:\Program Files (x86)\Steam\steam.exe"
         os.startfile(steamfile)
     @staticmethod

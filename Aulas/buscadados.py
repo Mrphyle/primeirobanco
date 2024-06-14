@@ -4,7 +4,7 @@ config = {
     'user':'root',
     'password':'',
     'host': 'localhost',
-    'database': 'ruby'
+    'database': 'mrphyle'
 }
 conect = sqc.connect(**config)
 query = "SELECT * FROM"
