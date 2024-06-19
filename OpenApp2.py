@@ -12,10 +12,13 @@ class Buttontype:
     def chrome_location():
         chromefile = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
         os.startfile(chromefile)
+        Fdmfile= r"C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Free Download Manager\Free Download Manager.lnk"
+        os.startfile(Fdmfile)
     @staticmethod
     def Drive_location():
         drivefile = r"C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Google Drive.lnk"
         os.startfile(drivefile)
+
     @staticmethod
     def Obs_location():
         obsfile = r"C:\Users\Public\Desktop\OBS Studio.lnk"
