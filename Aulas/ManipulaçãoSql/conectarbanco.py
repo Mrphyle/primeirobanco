@@ -31,8 +31,10 @@ try:
         host = 'localhost',
         user = 'root',
         password = "",
-        database = 'mrphyledatabase',
+        database = 'test',
     )
     print("conectado com susseso!")
 except:
     print("Não foi possivel se conectar")
+finally:
+    conexção.close()
