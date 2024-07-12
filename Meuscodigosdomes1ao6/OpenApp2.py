@@ -55,6 +55,41 @@ class Buttontype:
     @staticmethod
     def taskmng_comand():
         pa.hotkey('ctrl','shift','esc')
+    @staticmethod
+    def sometimes_script():
+        class Buttontype2:
+            @staticmethod
+            def webcam_file():
+                webcam_location = r"C:\Program Files (x86)\DroidCam\DroidCamApp.exe"
+                Open_webcam = os.startfile(webcam_location)
+            @staticmethod
+            def xamp_file():
+                xamp_location = r"C:\ProgramData\Microsoft\Windows\Start Menu\Programs\XAMPP\XAMPP Control Panel.lnk"
+                Open_xamp = os.startfile(xamp_location)        
+        somentimesroot = tk.Tk()
+        somentimesroot.geometry("800x600")
+        somentimesroot.title("Abridor de aplicativos 2.0")
+        somentimesroot.configure(bg='gray20')
+        button_style = {
+            'bg': 'gray30',
+            'fg': 'white',
+            'activebackground': 'gray50',
+            'activeforeground': 'white',
+            'height': 3,
+            'width': 20
+        }
+        #Titulo
+        title_text = tk.Text(somentimesroot, height=1, bg='gray20', fg='white', font=('Helvetica', 16), bd=0)
+        title_text.pack(pady=20)
+        title_text.insert(tk.END, "Clique no app que deseja abrir abaixo:")
+        title_text.configure(state='disabled')
+        #webcam
+        webcam_button = tk.Button(somentimesroot,text="Webcam",command= Buttontype2.webcam_file,**button_style)
+        webcam_button.place(x=20,y=1*75)
+        #xamp
+        xamp_button = tk.Button(somentimesroot,text="xamp",command= Buttontype2.xamp_file,**button_style)
+        xamp_button.place(x=20,y=2*75)
+        somentimesroot.mainloop()
 # Criar a janela principal
 root = tk.Tk()
 root.geometry("800x600")
@@ -106,4 +141,7 @@ teams_button.place(x=430,y=3*75)
 #minecraft
 mine_button= tk.Button(root,text="Minecraft\nLauncher",command=Buttontype.mine_location,**button_style)
 mine_button.place(x=430,y=4*75)
+#apps que uso de vez em nunca
+sometimes_button = tk.Button(root,text="sometimes",command=Buttontype.sometimes_script,**button_style)
+sometimes_button.place(x=430,y=1*75)
 root.mainloop()
