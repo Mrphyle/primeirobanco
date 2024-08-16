@@ -10,7 +10,7 @@ try:
         password = '',
         database = 'mrphyle',
     )
-    sql = "SELECT marca, COUNT(marca) FROM veiculos GROUP BY marca;"
+    sql = "SELECT modelo,COUNT(pessoas) FROM veiculos GROUP BY modelo ORDER BY pessoas;"
     cursor = connect.cursor()
     cursor.execute(sql)
     result = cursor.fetchall()
@@ -23,7 +23,7 @@ finally:
     cursor.close()
     connect.close()
 plt.style.use('dark_background')
-cor = ['Blue','yellow']
+cor = ['purple']
 plt.bar(x,y,width=0.5,color=cor)
 plt.title("quantidade de naves")
 plt.show()
