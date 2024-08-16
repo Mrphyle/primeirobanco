@@ -22,7 +22,8 @@ except:
 finally:
     cursor.close()
     connect.close()
-cor = ['white','yellow']
+plt.style.use('dark_background')
+cor = ['Blue','yellow']
 plt.bar(x,y,width=0.5,color=cor)
 plt.title("quantidade de naves")
 plt.show()
