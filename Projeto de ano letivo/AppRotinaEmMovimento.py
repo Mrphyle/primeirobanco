@@ -34,6 +34,7 @@ class ExerciseApp(QMainWindow):
 
         # Lista de vídeos de exemplo (músculo -> URL do Instagram)
         self.videos = {
-            'biceps': '=', # Substitua XXXXXX pelo ID do post do Instagram
-            'triceps': 'https://www.instagram.com/p/YYYYYY/', # Substitua YYYYYY pelo ID do post do Instagram
+            'biceps': '', # Substitua XXXXXX pelo ID do post do Instagram
+            'triceps': 'https://www.instagram.com/reel/C8Nn2exP5yv/?igsh=ZjBuZHpzdTJ2M2Nw', # Substitua YYYYYY pelo ID do post do Instagram
             'peito': 'https://www.instagram.com/p/ZZZZZZ/', # Substitua ZZZZZZ pelo ID do post do Instagram
+        }
